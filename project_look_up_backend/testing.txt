@@ -1,0 +1,43 @@
+1. /api/flights
+	* POST
+		- it should return 400 if origin is not provided
+		- it should return 400 if origin is more than 256 characters
+
+		- it should return 400 if destination is not provided
+		- it should return 400 if destination is more than 256 characters
+		
+		- it should return 400 if time is not provided
+		- it should return 400 if time is more than 256 characters
+
+		- it should return 400 if airplane is not provided
+		- it should return 400 if time is more than 64 characters
+
+		- it should return 400 if adultSeatCost is not provided
+		- it should return 400 if adultSeatCost is more than 64 characters
+
+
+		- it should return 400 if childrenSeatCost is not provided
+		- it should return 400 if childrenSeatCost is more than 64 characters
+
+		- it should return400 if babiesSeatCost is not provided
+		- it should return 400 if babiesSeatCost is not a number
+		
+		- it should return 400 if trolleyCost is not provided
+		- it should return 400 if trolleyCost is more than 64 characters
+
+		- it should return 409 if flight with the airplane already exists
+
+		- it should return 201 if flight is created
+
+		- it should have the flight data in the database
+		
+		
+		
+
+	* GET
+
+2. /api/users/authenticate
+	* POST
+
+3. /api/orders
+	*POST

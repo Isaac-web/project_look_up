@@ -1,0 +1,197 @@
+.main {
+    padding: $wrapperSpacing;
+    margin: $spacingM 0 200px 0;
+    position: relative;
+    top: $headerHeight;
+
+    &__banner {
+        background-color: $lightGray;
+        height: 70vh;
+        width: 100%;
+        position: relative;
+    }
+
+    &__image {
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 70%;
+        background-image: url('/airplane_wing.jpg');
+        background-position: center;
+        background-clip: content-box;
+        background-size: cover;
+        border-radius: 0 150px 0 0;
+    }
+
+    &__textbox {
+        max-width: 60%;
+        background-color: rgba($white, .95);
+        padding: 40px 10% 40px 5%;
+        position: absolute;
+        right: 0;
+        top: 15%;
+        font-size: $fontSizeXL;
+        box-sizing: border-box;
+        text-align: left;
+        font-family: $fontFamilyMain;
+        font-weight: 300;
+        color: $lightBlue;
+
+        p {
+            margin: 0;
+        }
+
+        &::before {
+            content: '';
+            height: 100%;
+            width: 12px;
+            background-color: $darkBlue;
+            position: absolute;
+            left: -12px;
+            top: 0;
+        }
+
+        &::after {
+            content: '';
+            height: 100%;
+            width: 50px;
+            background-color: $lightBlue;
+            position: absolute;
+            right: 0px;
+            top: 0;
+        }
+    }
+
+    &__selectContainer {
+        width: 700px;
+        background-color: $white;
+        padding: $spacingM 20px;
+        box-sizing: border-box;
+        border-radius: $mainRadius;
+        box-shadow: $mainShadow;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: absolute;
+        bottom: -120px;
+        left: calc(50% - 350px);
+    }
+
+    &__button {
+        width: 180px;
+        height: 50px;
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .main {
+        &__banner {
+            height: 90vh;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+    .main {
+        padding: 0;
+
+        &__banner {
+            height: 40vh;
+        }
+
+        &__selectContainer {
+            bottom: -200px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+    .main {
+        padding: 0;
+
+        &__banner {
+            height: 52vh;
+        }
+
+        &__selectContainer {
+            bottom: -200px;
+        }
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .main {
+        padding: 40px 0;
+        top: 0;
+
+        &__banner {
+            height: 100vh;
+        }
+
+        &__image {
+            width: 100%;
+            border-radius: 0;
+        }
+
+        &__textbox {
+            max-width: 100%;
+            font-size: 2rem;
+            padding: 30px 10% 30px 10%;
+        }
+
+        &__selectContainer {
+            left: 0;
+            bottom: -24vh;
+            width: 100%;
+            padding: 20px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__button {
+            width: 200px;
+        }
+
+        .select {
+            &__button {
+                height: 40px;
+                width: 200px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 830px) and (orientation: landscape) {
+    .main {
+        top: 0;
+        
+        &__banner {
+            height: calc(100vh - 70px);
+            margin: 70px 0 0 0;
+        }
+
+        &__textbox {
+            max-width: 80%;
+            font-size: 2rem;
+        }
+
+        &__selectContainer {
+            position: initial;
+            width: 100%;
+            border-radius: 0;
+            box-shadow: none;
+            left: 0;
+            bottom: -140vh;
+            width: 100%;
+            padding: 20px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .select__button,
+        &__button {
+            width: 380px;
+        }
+    }
+}
